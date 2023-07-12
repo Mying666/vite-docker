@@ -1,10 +1,3 @@
-<!--
- * @Author: zhangjinying
- * @Date: 2023-07-12 16:18:31
- * @LastEditors: zhangjinying
- * @LastEditTime: 2023-07-12 16:25:10
- * @Description: 
--->
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -18,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <p>好厉害呀👍</p>
+  <p>修改一下自动部署<a href="https://github.com/Mying666/vite-docker">项目地址</a></p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
