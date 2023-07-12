@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-#     - run: npm ci
+    - run: npm ci
     - run: npm i
     - run: npm run build --if-present
     
@@ -29,5 +29,5 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: 39.105.95.80
         REMOTE_USER: root
-        localPath: dist/
-        remotePath: /root/github_CI
+        SOURCE: dist/
+        TARGET: /root/github_CI
