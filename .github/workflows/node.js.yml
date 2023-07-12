@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      BRANCH: ${{ github.ref }}
+      BRANCH: ${{ ref_name }}
     
     steps:
     - uses: actions/checkout@v3
@@ -28,7 +28,7 @@ jobs:
     
     - name: Show current branch
       run: |
-        echo "Current branch: ${{ toJson(github) }}"
+        echo "Current branch: $BRANCH"
     
 #     - name: Deploy to server
 #       uses: easingthemes/ssh-deploy@v2
