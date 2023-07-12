@@ -21,17 +21,17 @@ jobs:
         node-version: 16
     - run: npm ci
     - run: npm i
-    - run: npm run build --if-present
+#     - run: npm run build --if-present
     
     - name: Show current branch
       run: |
         echo "Current branch: ${{ JSON.stringify(github) }}"
     
-    - name: Deploy to server
-      uses: easingthemes/ssh-deploy@v2
-      with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: 39.105.95.80
-        REMOTE_USER: root
-        SOURCE: dist/
-        TARGET: /www/server/nginx/html
+#     - name: Deploy to server
+#       uses: easingthemes/ssh-deploy@v2
+#       with:
+#         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+#         REMOTE_HOST: 39.105.95.80
+#         REMOTE_USER: root
+#         SOURCE: dist/
+#         TARGET: /www/server/nginx/html
