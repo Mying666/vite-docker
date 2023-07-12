@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -22,6 +22,10 @@ jobs:
     - run: npm ci
     - run: npm i
     - run: npm run build --if-present
+    
+    - name: Show current branch
+      run: |
+        echo "Current branch: ${{ github.ref }}"
     
     - name: Deploy to server
       uses: easingthemes/ssh-deploy@v2
