@@ -11,10 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <p>这是分支CI_1</p>
-  <p>
-    cookie设置branch可以选择当前展示的分支，CI_1或者CI_2，默认master
-  </p>
+  <p>这是分支CI_2</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
