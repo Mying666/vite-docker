@@ -12,6 +12,9 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <p>这是分支CI_1</p>
+  <p>
+    cookie可以选择当前展示的分支，CI_1或者CI_2，默认master
+  </p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
