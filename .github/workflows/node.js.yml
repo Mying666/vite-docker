@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      BRANCH: ${{ github.ref#refs/heads/ }}
+      BRANCH: ${{ github.ref }}
     
     steps:
     - uses: actions/checkout@v3
@@ -22,19 +22,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm ci
-    - run: npm i
-    - run: npm run build --if-present
+#     - run: npm ci
+#     - run: npm i
+#     - run: npm run build --if-present
     
     - name: Show current branch
       run: |
         echo "Current branch: $BRANCH"
     
-    - name: Deploy to server
-      uses: easingthemes/ssh-deploy@v2
-      with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: 39.105.95.80
-        REMOTE_USER: root
-        SOURCE: dist/
-        TARGET: /www/server/nginx/html/$BRANCH
+#     - name: Deploy to server
+#       uses: easingthemes/ssh-deploy@v2
+#       with:
+#         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+#         REMOTE_HOST: 39.105.95.80
+#         REMOTE_USER: root
+#         SOURCE: dist/
+#         TARGET: /www/server/nginx/html/$BRANCH
