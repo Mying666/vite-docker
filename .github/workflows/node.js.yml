@@ -25,7 +25,7 @@ jobs:
     
     - name: Show current branch
       run: |
-        echo "Current branch: ${{ github.ref }}"
+        echo "Current branch: ${{ github }}"
     
     - name: Deploy to server
       uses: easingthemes/ssh-deploy@v2
