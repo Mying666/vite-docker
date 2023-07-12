@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      REF: ${{ github.ref }}
-      BRANCH: $REF#refs/heads/
+      BRANCH: ${{ github.ref#refs/heads/ }}
     
     steps:
     - uses: actions/checkout@v3
