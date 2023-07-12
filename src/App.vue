@@ -11,7 +11,10 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <p>修改一下自动部署<a href="https://github.com/Mying666/vite-docker">项目地址</a></p>
+  <p>这是分支CI_1</p>
+  <p>
+    cookie设置branch可以选择当前展示的分支，CI_1或者CI_2，默认master
+  </p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
