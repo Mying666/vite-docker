@@ -19,13 +19,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm ci
-    - run: npm i
+#     - run: npm ci
+#     - run: npm i
 #     - run: npm run build --if-present
     
     - name: Show current branch
       run: |
-        echo "Current branch: ${{ github.branch }}"
+        REF=${{ github.ref }}
+        BRANCH=${REF#refs/heads/}
+        echo "Current branch: $BRANCH"
     
 #     - name: Deploy to server
 #       uses: easingthemes/ssh-deploy@v2
