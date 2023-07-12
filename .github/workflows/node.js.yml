@@ -15,7 +15,7 @@ jobs:
     
     env:
       REF: ${{ github.ref }}
-      BRANCH: ${REF#refs/heads/}
+      BRANCH: $REF#refs/heads/
     
     steps:
     - uses: actions/checkout@v3
