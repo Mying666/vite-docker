@@ -26,9 +26,8 @@ jobs:
     - name: Deploy to server
       uses: easingthemes/ssh-deploy@v2
       with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: 39.105.95.80
         REMOTE_USER: root
-        username: root
-        password: ${{ secrets.SSH_PASSWORD }}
         localPath: dist/
         remotePath: /root/github_CI
