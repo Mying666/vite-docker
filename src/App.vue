@@ -1,3 +1,10 @@
+<!--
+ * @Author: zhangjinying
+ * @Date: 2023-07-12 16:18:31
+ * @LastEditors: zhangjinying
+ * @LastEditTime: 2023-07-12 16:23:20
+ * @Description: 
+-->
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -11,7 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <p>修改一下自动部署</p>
+  <p>好厉害呀👍</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
