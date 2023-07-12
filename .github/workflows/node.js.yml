@@ -26,7 +26,8 @@ jobs:
     - name: Deploy to server
       uses: easingthemes/ssh-deploy@v2
       with:
-        server: 39.105.95.80
+        REMOTE_HOST: 39.105.95.80
+        REMOTE_USER: root
         username: root
         password: ${{ secrets.SSH_PASSWORD }}
         localPath: dist/
