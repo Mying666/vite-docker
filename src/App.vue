@@ -11,6 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <p>修改一下自动部署</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
