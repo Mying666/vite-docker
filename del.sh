@@ -4,7 +4,7 @@
 max_days=7
 
 # 指定要扫描的文件夹路径
-folder_path="/www/server/nginx/html"
+folder_path="/Users/liang/Mying/vite-docker/dist"
 
 # 获取当前日期时间的时间戳
 current_timestamp=$(date +%s)
@@ -21,10 +21,15 @@ for folder in $folders; do
   fi
 
   # 获取文件夹的最后修改时间
-  modified_timestamp=$(stat -f %m "$folder")
+  # linux
+  modified_timestamp=$(stat -c %Y "$folder")
+  # mac
+  # modified_timestamp=$(stat -f %m "$folder")
 
   # 计算文件夹的存在天数
   days=$(( (current_timestamp - modified_timestamp) / (3600 * 24) ))
+
+  echo "Folder: $folder ___modified_timestamp: $modified_timestamp  ___days: $days"
 
   # 如果文件夹存在天数超过7天，则删除文件夹
   if (( days > $max_days )); then
